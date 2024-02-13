@@ -12,4 +12,8 @@ class Application @Inject()(cc: ControllerComponents) extends AbstractController
     Ok(views.html.index(SharedMessages.itWorks))
   }
 
+  def stuff(num: Int, msg: String) = Action{
+    Ok(views.html.index(s"Here is the number you chose: $num, and here is the message you thought of: $msg"))
+  }
+
 }
